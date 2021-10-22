@@ -15,4 +15,4 @@ runs-on: ubuntu-latest
 steps:
 - uses: actions/checkout@v2
 - name: Build the Docker image
-run: docker push cr.yandex/crpo30oaoogvq1b1e6l6/ubuntu:dz1
+run: docker push cr.yandex/crpo30oaoogvq1b1e6l6/dz1:latest
