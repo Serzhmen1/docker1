@@ -1,4 +1,4 @@
-name: Docker Image j
+name: Docker Image 
 
 on:
 push:
@@ -13,6 +13,6 @@ build:
 runs-on: dz1-latest
 
 steps:
-- uses: actions/checkout@v2
+- uses: actions/checkout@v1
 - name: Build the Docker image
 run: docker push cr.yandex/crpo30oaoogvq1b1e6l6/dz1:latest
