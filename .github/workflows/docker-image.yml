@@ -24,4 +24,3 @@ jobs:
          run: |
           docker build -t cr.yandex/crpo30oaoogvq1b1e6l6/ubuntu:latest .
           docker push cr.yandex/crpo30oaoogvq1b1e6l6/ubuntu:latest
-
