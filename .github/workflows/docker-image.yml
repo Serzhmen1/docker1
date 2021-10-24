@@ -1,27 +1,26 @@
-name: docker-image
+name: ci
 
 on:
-push:
-branches:
-- 'main'
+  push:
+    branches:
+      'main'
 
 jobs:
-docker:
-runs-on: ubuntu-latest
-steps:
--
-name: Checkout
-uses: actions/checkout@v2
--
-name: Log in to YC
-uses: docker/login-action@v1
-with:
-registry: cr.yandex
-username: oauth
-password: AQAAAAAa8LfkAATuwdeusC0E503usWOsfu23q90
--
-name: Build, tag, and push image to Yandex Cloud Container Registry
-run: |
-docker build -t cr.yandex/crpo30oaoogvq1b1e6l6/dz1:latest .
-docker push cr.yandex/crpo30oaoogvq1b1e6l6/dz1:latest
-
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Log in to YC
+        uses: docker/login-action@v1
+        with:
+          registry: cr.yandex
+          username: oauth
+          password: AQAAAAAa8LfkAATuwdeusC0E503usWOsfu23q90
+      -
+         name: Build, tag, and push image to Yandex Cloud Container Registry
+         run: |
+          docker build -t cr.yandex/crpo30oaoogvq1b1e6l6/ubuntu:latest .
+          docker push cr.yandex/crpo30oaoogvq1b1e6l6/ubuntu:latest
