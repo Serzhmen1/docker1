@@ -5,5 +5,5 @@ version: "3"
 
 
 services:
- moe:
+ laba:
   image: cr.yandex/crpo30oaoogvq1b1e6l6/ubuntu:latest
